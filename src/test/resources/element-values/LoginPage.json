@@ -1,0 +1,107 @@
+[
+  {
+    "key": "firsat1",
+    "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.ImageView",
+    "androidType": "xpath",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "btnPlay",
+    "androidValue": "com.vidyodan:id/btnPlay",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "btnForward",
+    "androidValue": "com.vidyodan:id/btnForward",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "seekBar",
+    "androidValue": "com.vidyodan:id/seekBar",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "profil",
+    "androidValue": "com.vidyodan:id/menuItemProfile",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "hesapOlustur",
+    "androidValue": "com.vidyodan:id/btnCreateAccount",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "etSurname",
+    "androidValue": "com.vidyodan:id/etSurname",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "etMail",
+    "androidValue": "com.vidyodan:id/etEmail",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "etPass",
+    "androidValue": "com.vidyodan:id/etPassword",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "etUsername",
+    "androidValue": "com.vidyodan:id/etUsername",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "etPhoneNumber",
+    "androidValue": "com.vidyodan:id/etPhoneNumber",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "cbPermission",
+    "androidValue": "com.vidyodan:id/cbPermission",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "btnSignUp",
+    "androidValue": "com.vidyodan:id/btnSignUp",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "btnClose",
+    "androidValue": "com.vidyodan:id/btnClose",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  },
+  {
+    "key": "etName",
+    "androidValue": "com.vidyodan:id/etName",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  }
+]
