@@ -94,8 +94,8 @@ public class HookImpl {
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
         capabilities.setCapability("unicodeKeyboard", false);
         capabilities.setCapability("resetKeyboard", false);
-        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.garanti.cepsubesi");
-        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.garanti.pfm.activity.SplashScreenActivity");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.gratis.android");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.app.gratis.ui.splash.SplashActivity");
 
         if (isLocal) {
             capabilities.setCapability(MobileCapabilityType.PLATFORM, MobilePlatform.ANDROID);
