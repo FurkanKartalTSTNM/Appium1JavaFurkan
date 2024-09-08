@@ -13,7 +13,11 @@ public class Testasd extends HookImpl {
     public void success(){
 
         step.waitBySecond(3);
-        driver.findElement(By.id("com.gratis.android:id/navigation_bar_item_icon_view")).click();
+        try {
+            step.findElement(By.id("com.google.android.apps.messaging:id/conversation_list_google_tos_popup_positive_button")).click();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
