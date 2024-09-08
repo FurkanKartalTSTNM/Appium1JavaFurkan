@@ -14,7 +14,7 @@ public class Testasd extends HookImpl {
 
         step.waitBySecond(3);
         //wait until element is visible
-        step.findElemenstByKey("com.gratis.android:id/nav_graph_campaign");
+        step.clickByKey("com.gratis.android:id/nav_graph_campaign");
     }
 
 }
