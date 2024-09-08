@@ -13,11 +13,8 @@ public class Testasd extends HookImpl {
     public void success(){
 
         step.waitBySecond(3);
-        try {
-            step.findElement(By.id("com.google.android.apps.messaging:id/conversation_list_google_tos_popup_positive_button")).click();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        //wait until element is visible
+        step.findElemenstByKey("com.gratis.android:id/ripple");
     }
 
 }
