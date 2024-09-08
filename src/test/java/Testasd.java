@@ -10,12 +10,13 @@ public class Testasd extends HookImpl {
     private AppiumDriver driver;
 
     @Test
-    public void success(){
+    public void success() throws InterruptedException {
 
         step.waitBySecond(3);
-        //wait until element is visible
-       // step.existElement("com.gratis.android:id/nav_graph_campaign");
         step.swipe("down");
+        driver.wait(Long.parseLong("5"));
+        driver.findElement(By.id("com.gratis.android:id/nav_graph_campaign")).click();
+
     }
 
 }
