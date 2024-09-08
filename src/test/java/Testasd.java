@@ -14,7 +14,7 @@ public class Testasd extends HookImpl {
 
         step.waitBySecond(3);
         step.swipe("down");
-        step.bulTikla("com.gratis.android:id/nav_graph_campaign", Integer.parseInt("5"));
+        driver.quit();
 
     }
 
