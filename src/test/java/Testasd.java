@@ -14,7 +14,11 @@ public class Testasd extends HookImpl {
 
         step.waitBySecond(3);
         step.swipe("down");
-        driver.quit();
+        step.swipeUP(Integer.parseInt("2"));
+        step.waitBySecond(3);
+        step.swipe("up");
+        step.swipeUP(Integer.parseInt("2"));
+        step.waitBySecond(3);
 
     }
 
