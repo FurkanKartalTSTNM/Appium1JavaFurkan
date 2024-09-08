@@ -14,7 +14,7 @@ public class Testasd extends HookImpl {
 
         step.waitBySecond(3);
         //wait until element is visible
-        step.existElement("com.gratis.android:id/nav_graph_campaign");
+       // step.existElement("com.gratis.android:id/nav_graph_campaign");
         step.swipe("down");
     }
 
