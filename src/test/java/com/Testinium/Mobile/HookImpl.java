@@ -118,7 +118,7 @@ public class HookImpl {
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
         capabilities
-                .setCapability("bundleId", "com.ozdilek.ozdilekteyim");
+                .setCapability("bundleId", "com.pharos.Gratis");
         if (!islocal) {
             capabilities.setCapability("key", System.getProperty("key"));
             capabilities.setCapability("waitForAppScript", "$.delay(1000);");
