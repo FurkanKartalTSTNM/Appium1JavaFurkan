@@ -196,4 +196,42 @@ public class Test extends HookImpl {
 
     }
 
+    @org.junit.jupiter.api.Test
+    public void AndroidBasicTestFail() throws InterruptedException {
+
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.id("com.gratis.android:id/nav_graph_trademarks")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.id("com.gratis.android:id/nav_graph_categories")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.id("com.gratis.android:id/nav_graph_campaignnnnn")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.id("com.gratis.android:id/nav_graph_trademarks")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.id("com.gratis.android:id/nav_graph_categories")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.id("com.gratis.android:id/nav_graph_campaign")).click();
+        step.waitBySecond(3);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    public void IOSBasicTestFail() throws InterruptedException {
+
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Markalar\"]")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Kategoriler\"]")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Kampanyalarasdsadsad\"]")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Markalar\"]")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Kategoriler\"]")).click();
+        step.waitBySecond(3);
+        appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Kampanyalar\"]")).click();
+        step.waitBySecond(3);
+
+    }
+
 }
