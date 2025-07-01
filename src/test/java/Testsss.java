@@ -1,12 +1,14 @@
 import com.Testinium.Mobile.HookImpl;
 import com.Testinium.Mobile.StepImpl;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
-public class Test extends HookImpl {
+
+public class Testsss extends HookImpl {
 
     StepImpl step= new StepImpl();
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void IOSBasicTestSuccess01() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -25,7 +27,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void IOSBasicTestSuccess02() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -44,7 +46,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void IOSBasicTestSuccess03() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -63,7 +65,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void IOSBasicTestSuccess04() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -82,7 +84,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void IOSBasicTestSuccess05() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -101,7 +103,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void AndroidBasicTestSuccess01() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -120,7 +122,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void AndroidBasicTestSuccess02() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -139,7 +141,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void AndroidBasicTestSuccess03() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -158,7 +160,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void AndroidBasicTestSuccess04() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -177,7 +179,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void AndroidBasicTestSuccess05() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -196,7 +198,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void AndroidBasicTestFail() throws InterruptedException {
 
         step.waitBySecond(3);
@@ -215,7 +217,7 @@ public class Test extends HookImpl {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void IOSBasicTestFail() throws InterruptedException {
 
         step.waitBySecond(3);
