@@ -56,7 +56,16 @@
     </dependencyManagement>
     <build>
         <plugins>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version> <!-- Java 23 desteği olan versiyon -->
+                <configuration>
+                    <source>23</source>
+                    <target>23</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 </project>
