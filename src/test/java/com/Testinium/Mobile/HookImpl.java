@@ -46,7 +46,7 @@ public class HookImpl {
             logger.info("************************************  BeforeScenario  ************************************");
 
             localUrl = new URL("http://127.0.0.1:4723/wd/hub");
-            hubUrl = new URL("http://hub-devcluster.testinium.io:4444/wd/hub");
+            hubUrl = new URL("http://host.docker.internal:4444/wd/hub");
 
             if (StringUtils.isEmpty(System.getProperty("key"))) {
                 if (localAndroid) {
