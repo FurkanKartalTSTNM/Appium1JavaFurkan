@@ -54,13 +54,15 @@ public class StepImpl {
     }
 
     public List<MobileElement> findElements(By by) throws Exception {
+        final By finalBy = by; // ✅ Lambda/anonim class içinde kullanmak için final referans
+
         List<MobileElement> webElementList = null;
         try {
             webElementList = appiumFluentWait.until(new ExpectedCondition<List<MobileElement>>() {
                 @Nullable
                 @Override
                 public List<MobileElement> apply(@Nullable WebDriver driver) {
-                    List<MobileElement> elements = driver.findElements(by);
+                    List<MobileElement> elements = driver.findElements(finalBy); // ✅ artık finalBy kullanılıyor
                     return elements.size() > 0 ? elements : null;
                 }
             });
@@ -72,6 +74,7 @@ public class StepImpl {
         }
         return webElementList;
     }
+
 
     public List<MobileElement> findElementsWithoutAssert(By by) {
 
@@ -205,14 +208,6 @@ public class StepImpl {
             e.printStackTrace();
         }
         return mobileElements;
-    }
-
-    public void swipeUP(int times) {
-        for (int i = 0; i < times; i++) {
-            logger.info(times + " kere yukarı doğru kaydır");
-            swipeUpAccordingToPhoneSize();
-            waitBySecond(1);
-        }
     }
 
     public void clickByText(String text) {
@@ -355,31 +350,6 @@ public class StepImpl {
             if (element.getText().toLowerCase().contains(text.toLowerCase())) {
                 element.click();
                 break;
-            }
-        }
-    }
-
-    public void clickByKeyWithSwipe(String key, String text) throws InterruptedException {
-        boolean find = false;
-        int maxRetryCount = 10;
-        while (!find && maxRetryCount > 0) {
-            List<MobileElement> elements = findElemenstByKey(key);
-            for (MobileElement element : elements) {
-                if (element.getText().contains(text)) {
-                    element.click();
-                    find = true;
-                    break;
-                }
-            }
-            if (!find) {
-                maxRetryCount--;
-                if (appiumDriver instanceof AndroidDriver) {
-                    swipeUpAccordingToPhoneSize();
-                    waitBySecond(1);
-                } else {
-                    swipeDownAccordingToPhoneSize();
-                    waitBySecond(1);
-                }
             }
         }
     }
@@ -527,62 +497,8 @@ public class StepImpl {
         Assertions.assertTrue(findElementByKey(key) != null, message);
     }
 
-    public void containsTextByKey(String key, String text) {
-        By by = selector.getElementInfoToBy(key);
-        Assertions.assertTrue(appiumFluentWait.until(new ExpectedCondition<Boolean>() {
-            private String currentValue = null;
-
-            @Override
-            public Boolean apply(WebDriver driver) {
-                try {
-                    currentValue = driver.findElement(by).getAttribute("value");
-                    return currentValue.contains(text);
-                } catch (Exception e) {
-                    return false;
-                }
-            }
-
-            @Override
-            public String toString() {
-                return String.format("text contains be \"%s\". Current text: \"%s\"", text, currentValue);
-            }
-        }));
-    }
 
 
-    public void swipeUpAccordingToPhoneSize() {
-        if (appiumDriver instanceof AndroidDriver) {
-            Dimension d = appiumDriver.manage().window().getSize();
-            int height = d.height;
-            int width = d.width;
-            System.out.println(width + "  " + height);
-
-            int swipeStartWidth = width / 2, swipeEndWidth = width / 2;
-            int swipeStartHeight = (height * 20) / 100;
-            int swipeEndHeight = (height * 60) / 100;
-            logger.info("Start width: " + swipeStartWidth + " - Start height: " + swipeStartHeight + " - End height: " + swipeEndHeight);
-            new TouchAction((AndroidDriver) appiumDriver)
-                    .press(PointOption.point(swipeStartWidth, swipeEndHeight))
-                    .waitAction(WaitOptions.waitOptions(ofMillis(2000)))
-                    .moveTo(PointOption.point(swipeEndWidth, swipeStartHeight))
-                    .release()
-                    .perform();
-        } else {
-            Dimension d = appiumDriver.manage().window().getSize();
-            int height = d.height;
-            int width = d.width;
-
-            int swipeStartWidth = width / 2, swipeEndWidth = width / 2;
-            int swipeStartHeight = (height * 70) / 100;
-            int swipeEndHeight = (height * 30) / 100;
-            new TouchAction(appiumDriver)
-                    .press(PointOption.point(swipeStartWidth, swipeEndHeight))
-                    .waitAction(WaitOptions.waitOptions(ofMillis(2000)))
-                    .moveTo(PointOption.point(swipeEndWidth, swipeStartHeight))
-                    .release()
-                    .perform();
-        }
-    }
 
 
     public void swipeDownAccordingToPhoneSize() {
@@ -906,37 +822,6 @@ public class StepImpl {
     }
 
 
-    public void swipeKeyy(String key, int limit) throws InterruptedException {
-
-
-        boolean isAppear = false;
-
-        int windowHeight = this.getScreenHeight();
-        for (int i = 0; i < limit; ++i) {
-            try {
-
-                Point elementLocation = findElementByKeyWithoutAssert(key).getLocation();
-                logger.info(elementLocation.x + "  " + elementLocation.y);
-                Dimension elementDimension = findElementByKeyWithoutAssert(key).getSize();
-                logger.info(elementDimension.width + "  " + elementDimension.height);
-                // logger.info(appiumDriver.getPageSource());
-                if (elementDimension.height > 20) {
-                    isAppear = true;
-                    logger.info("aranan elementi buldu");
-                    break;
-                }
-            } catch (Exception e) {
-                System.out.println("Element ekranda görülmedi. Tekrar swipe ediliyor");
-            }
-            System.out.println("Element ekranda görülmedi. Tekrar swipe ediliyor");
-
-            swipeUpAccordingToPhoneSize();
-            waitBySecond(1);
-        }
-
-    }
-
-
     private Long getTimestamp() {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         return (timestamp.getTime());
@@ -1096,19 +981,6 @@ public class StepImpl {
                 swipeDownAccordingToPhoneSizeFromSpecificPosition();
                 waitBySecond(1);
             }
-        }
-    }
-
-    public void swipeUntilToFindElement(String key) {
-        int maxRetryCount = 10;
-        while (maxRetryCount > 0) {
-            MobileElement element = findElementByKeyWithoutAssert(key);
-            if (element != null) {
-                break;
-            }
-            maxRetryCount--;
-            swipeUpAccordingToPhoneSize();
-            waitBySecond(1);
         }
     }
 
