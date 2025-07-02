@@ -1,4 +1,4 @@
-package com.Testinium.Mobile;
+package com.testinium;
 
 import com.Testinium.Mobile.helper.RandomString;
 import com.Testinium.Mobile.helper.StoreHelper;

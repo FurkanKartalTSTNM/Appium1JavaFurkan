@@ -1,5 +1,5 @@
-import com.Testinium.Mobile.HookImpl;
-import com.Testinium.Mobile.StepImpl;
+package com.testinium;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 

@@ -1,4 +1,4 @@
-package com.Testinium.Mobile;
+package com.testinium;
 
 import com.Testinium.Mobile.selector.Selector;
 import com.Testinium.Mobile.selector.SelectorFactory;
