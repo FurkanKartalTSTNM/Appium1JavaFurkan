@@ -1,4 +1,4 @@
-package com.Testinium.Mobile.selector;
+package com.testinium.selector;
 
 public enum SelectorType {
   ANDROID,

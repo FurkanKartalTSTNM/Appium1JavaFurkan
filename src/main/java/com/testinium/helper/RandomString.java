@@ -1,4 +1,4 @@
-package com.Testinium.Mobile.helper;
+package com.testinium.helper;
 
 import java.security.SecureRandom;
 import java.util.Locale;

@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 
-public class Testsss extends HookImpl {
-
+public class ExampleTest extends StepImpl {
     StepImpl step= new StepImpl();
 
     @Test
@@ -235,5 +234,4 @@ public class Testsss extends HookImpl {
         step.waitBySecond(3);
 
     }
-
 }

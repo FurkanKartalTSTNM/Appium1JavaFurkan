@@ -1,23 +1,24 @@
-package com.Testinium.Mobile.helper;
+package com.testinium.helper;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.testinium.model.ElementInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-
-import com.Testinium.Mobile.model.ElementInfo;
-import org.apache.log4j.Logger;
-
 public enum StoreHelper {
     INSTANCE;
-    Logger logger = org.apache.log4j.Logger.getLogger(getClass());
+    Logger logger = LoggerFactory.getLogger(getClass());
     private static final String DEFAULT_DIRECTORY_PATH = "element-values";
     ConcurrentMap<String, Object> elementMapList;
 
@@ -36,28 +37,43 @@ public enum StoreHelper {
                 elementInfoList = gson
                         .fromJson(new FileReader(file), elementType);
                 elementInfoList.parallelStream()
-                        .forEach(elementInfo -> elementMapList.put(elementInfo.getKey(), elementInfo));
+                        .forEach(elementInfo -> elementMapList.put(elementInfo.getKey(), getElementInfo(elementInfo)));
             } catch (FileNotFoundException e) {
                 logger.warn("{} not found", e);
             }
         }
     }
 
+    private ElementInfo getElementInfo(ElementInfo elementInfo) {
+
+        return elementInfo;
+    }
+
     private File[] getFileList() {
-        File[] fileList = new File(
-                this.getClass().getClassLoader().getResource(DEFAULT_DIRECTORY_PATH).getFile())
+        URI uri = null;
+        try {
+            uri = new URI(this.getClass().getClassLoader().getResource(DEFAULT_DIRECTORY_PATH).getFile());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+            logger.error(
+                    "File Directory Is Not Found! file name: {}",
+                    DEFAULT_DIRECTORY_PATH);
+            throw new NullPointerException();
+        }
+        File[] fileList = new File(uri.getPath())
                 .listFiles(pathname -> !pathname.isDirectory() && pathname.getName().endsWith(".json"));
-        if (fileList == null) {
+        try {
+        } catch (Exception e) {
             logger.warn(
-                    "File Directory Is Not Found! Please Check Directory Location. Default Directory Path = {}" +
-                            DEFAULT_DIRECTORY_PATH);
+                    "File Directory Is Not Found! Please Check Directory Location. Default Directory Path = {}",
+                    DEFAULT_DIRECTORY_PATH);
             throw new NullPointerException();
         }
         return fileList;
     }
 
     public void printAllValues() {
-        elementMapList.forEach((key, value) -> logger.info("Key = {} value = {}" + key + " " + value));
+        elementMapList.forEach((key, value) -> logger.info("Key = {} value = {}", key, value));
     }
 
 

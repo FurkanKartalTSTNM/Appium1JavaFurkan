@@ -1,4 +1,4 @@
-package com.Testinium.Mobile.model;
+package com.testinium.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -87,13 +87,13 @@ public class ElementInfo {
   @Override
   public String toString() {
     return "ElementInfo{" +
-            "key='" + key + '\'' +
-            ", androidValue='" + androidValue + '\'' +
-            ", androidType='" + androidType + '\'' +
-            ", androidIndex=" + androidIndex +
-            ", iosValue='" + iosValue + '\'' +
-            ", iosType='" + iosType + '\'' +
-            ", iosIndex=" + iosIndex +
-            '}';
+        "key='" + key + '\'' +
+        ", androidValue='" + androidValue + '\'' +
+        ", androidType='" + androidType + '\'' +
+        ", androidIndex=" + androidIndex +
+        ", iosValue='" + iosValue + '\'' +
+        ", iosType='" + iosType + '\'' +
+        ", iosIndex=" + iosIndex +
+        '}';
   }
 }
