@@ -16,7 +16,7 @@
         <junit.version>5.8.0</junit.version>
         <junitengine.version>5.0.3</junitengine.version>
         <junitprovider.version>1.0.3</junitprovider.version>
-        <java.version>23</java.version>
+        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <appium.version>7.3.0</appium.version>
     </properties>
@@ -61,8 +61,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version> <!-- Java 23 desteği olan versiyon -->
                 <configuration>
-                    <source>23</source>
-                    <target>23</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
         </plugins>
